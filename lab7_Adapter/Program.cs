@@ -11,27 +11,20 @@ namespace lab7_Adapter
         {
             Turkey turkey = new Turkey();
             IDuck fake_duck = new Duck_To_Turkey_Adapter(turkey);
-            //  IDuck real_duck = new DomesticDuck();
+            IDuck real_duck1 = new DomesticDuck();
+            IDuck real_duck2 = new WildDuck();
 
-            //fake_duck.Fly();
-            //fake_duck.Swim();
-            //fake_duck.Quak();
+            IDuck[] ducks = new IDuck[3];
+            ducks[0] = fake_duck;
+            ducks[1] = real_duck1;
+            ducks[2] = real_duck2;
 
-            //real_duck.Fly();
-            //real_duck.Swim();
-            //real_duck.Quak();
-            IDuck objDuck = IDuck.NullObject();
-            objDuck.Fly();
-
-            //IDuck[] ducks = new IDuck[2];
-            //ducks[0] = fake_duck;
-            //ducks[1] = real_duck;
-            //foreach (var duck in ducks)
-            //{
-            //    duck.Fly();
-            //    duck.Swim();
-            //    duck.Quak();
-            //}
+            foreach (var duck in ducks)
+            {
+                duck.Fly();
+                duck.Swim();
+                duck.Quak();
+            }
         }
     }
 }

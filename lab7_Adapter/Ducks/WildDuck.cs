@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace lab7_Adapter.Ducks
 {
-    class DomesticDuck : IDuck
+    class WildDuck : IDuck
     {
         public string Name { get; }
-        public DomesticDuck()
+        
+        public WildDuck()
         {
-            Name = "Домашняя утка";
+            Name = "Дикая утка";
         }
 
         public void Fly()
@@ -23,6 +24,7 @@ namespace lab7_Adapter.Ducks
         {
             Console.WriteLine($"{Name} плывет");
         }
+
         public void Quak()
         {
             Console.WriteLine($"{Name} крякает");
