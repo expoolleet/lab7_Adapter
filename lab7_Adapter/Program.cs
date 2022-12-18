@@ -1,7 +1,6 @@
 ﻿using lab7_Adapter.Adapters;
 using lab7_Adapter.Ducks;
 using lab7_Adapter.Turkeys;
-using System;
 
 namespace lab7_Adapter
 {
