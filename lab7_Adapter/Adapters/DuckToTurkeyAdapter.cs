@@ -3,11 +3,11 @@ using lab7_Adapter.Turkeys;
 
 namespace lab7_Adapter.Adapters
 {
-    class Duck_To_Turkey_Adapter : IDuck
+    class DuckToTurkeyAdapter : IDuck
     {
         private readonly Turkey turkey;
 
-        public Duck_To_Turkey_Adapter(Turkey turkey)
+        public DuckToTurkeyAdapter(Turkey turkey)
         {
             this.turkey = turkey;
         }

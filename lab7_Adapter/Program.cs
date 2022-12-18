@@ -9,7 +9,7 @@ namespace lab7_Adapter
         static void Main(string[] args)
         {
             Turkey turkey = new Turkey();
-            IDuck fake_duck = new Duck_To_Turkey_Adapter(turkey);
+            IDuck fake_duck = new DuckToTurkeyAdapter(turkey);
             IDuck real_duck1 = new DomesticDuck();
             IDuck real_duck2 = new WildDuck();
 
@@ -23,6 +23,7 @@ namespace lab7_Adapter
                 duck.Fly();
                 duck.Swim();
                 duck.Quak();
+                Console.WriteLine("\n");
             }
         }
     }
